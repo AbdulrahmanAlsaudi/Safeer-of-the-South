@@ -1,287 +1,319 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-  
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 5px;
-  right: 70px;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 65px;
-  color: black;
-  font-size: 35px;
-  cursor: pointer;
-}
-</style>
-
-
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flix.css">
+    <title>Document</title>
 </head>
 <body>
+  <div class="container">
 
-<div style="text-align:center">
-  <h1> <a href="../index.html"><img src="assets/restaurant44.png"width="150"height="100" alt="logo-img"></a></h1> 
-  <h2 style="  text-align: center;
-  font-size: 16px;
-  padding: 5px;
-  margin: 20px auto;
-  border: 1.5px solid #eaa023;
-  width: 140px;
-  border-radius: 12px 0 12px 12px;
-  background-color: #0C1023;
-  box-shadow: solid #ED1D24 0 3px 3px 3px;
-  color: #fff;" >معرض الصور</h2>
- 
-</div>
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+   
+    <div id="imgtext"></div>
 
-<!-- The four columns -->
-<div class="row">
+    <div class="heading" style="text-align:center;">
+      
+            <h1> <a href="../index.html"><img src="assets/img/logo/restaurant44.png"width="150"height="100" alt="logo-img"></a></h1> 
+            <h2 style="  text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            margin: 20px auto;
+            border: 1.5px solid #eaa023;
+            width: 140px;
+            border-radius: 12px 0 12px 12px;
+            background-color: #0C1023;
+            box-shadow: solid #ED1D24 0 3px 3px 3px;
+            color: #fff;" >معرض الصور</h2>
+           
+          
+    </div>
+    <div class="img-container">
 
-    <div class="column">
-        <img src="assets/food/لحم مضغوط.jpg" alt="لحم مضغوط مع الرز" style="width:90px;" onclick="myFunction(this);" >
-  </div>
+        <div class="img">
+            <img src="assets/food/لحم مضغوط.jpg" onclick="" alt="نفر لحم مضغوط"> 
+        </div>
 
-  <div class="column">
-    <img src="assets/food/لحم مندي.jpg" alt="نفر لحم مندي مع الرز" style="width:90px;" onclick="myFunction(this);">
-  </div>
+        <div class="img">
+            <img src="assets/food/لحم مندي.jpg" onclick="" alt="نفر لحم مندي"> 
+        </div>
 
-  <div class="column">
-    <img src="assets/food/برمه لحم مع الرز.jpg" alt="برمه مع الرز" style="width:90px;" onclick="myFunction(this);">
-  </div>
+        <div class="img">
+            <img src="assets/food/برمه لحم مع الرز.jpg"onclick="" alt="برمه لحم مع الرز"> 
+        </div>
 
-  <div class="column">
-    <img src="assets/food/دجاج شواية مع الرز.jpg" alt="حبة دجاج شواية مع الرز" style="width:99px;" onclick="myFunction(this);">
-  </div>
+        <div class="img">
+            <img src="assets/food/دجاج شواية مع الرز.jpg" onclick="" alt=" حبة دجاج شواية مع الرز"> 
+        </div>
 
-  <div class="column">
-    <img src="assets/food/دجاج مقلوبة.jpg" alt="حبة دجاج مقلوبة مع الرز" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج مقلوبة.jpg" onclick="" alt=" حبة دجاج مقلوبة مع الرز"> 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج سفير الجنوب.jpg" alt="حبة دجاج سفير الجنوب" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج سفير الجنوب.jpg" onclick="" alt=" حبة دجاج سفير الجنوب "> 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج مضغوط.jpg" alt="حبة دجاج مضغوط مع الرز" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+         
+            <img src="assets/food/دجاج مضغوط.jpg" onclick="" alt=" حبة دجاج مضغوط مع الرز" > 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج مندي.jpg" alt="حبة دجاج مندي مع الرز" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج مندي.jpg" onclick="" alt=" حبة دجاج مندي مع الرز"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/دجاج مدفون.jpg" alt="حبة مدفون مع الرز" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج مدفون.jpg" onclick="" alt=" حبة دجاج مدفون"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/دجاج زربيان.jpg" alt="حبة دجاج زربيان عدني " style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج زربيان.jpg" onclick="" alt=" حبة دجاج زربيان عدني"> 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج مقلي.jpg" alt="حبة دجاج مقلي مع الرز" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج مقلي.jpg"  onclick="" alt=" حبة دجاج مقلي مع الرز"> 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج فحم.jpg" alt="حبة دجاج فحم" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج فحم.jpg" onclick="" alt=" حبة دجاج فحم مع الرز"> 
+        </div>
 
-<div class="column">
-<img src="assets/food/دجاج ساده.jpg" alt=" حبة دجاج ساده" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دجاج ساده.jpg" onclick="" alt=" حبة دجاج سادة"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/حيسية لحم.jpg" alt=" حيسية لحم" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/حيسية لحم.jpg" onclick="" alt="حيسية لحم"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/حيسيه لحوح ساده.jpg" alt="حيسية لحوح ساده" style="width:70px; height: 65px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/حيسيه لحوح ساده.jpg" onclick="" alt="حيسية لحوح ساده"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/مغش لحم.jpg" alt="مغش لحم" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مغش لحم.jpg" onclick="" alt=" مغش لحم"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/مرسه سمن وعسل.jpg" alt="مرسه سمن عسل" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مرسه سمن وعسل.jpg" onclick="" alt="مرسه سمن وعسل"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/قوار.jpg" alt="قوار حسب الطلب" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/قوار.jpg" onclick="" alt="قوار حسب الطلب"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/حميس.jpg" alt="حميس" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/حميس.jpg" onclick="" alt="حميس"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/مكشن سمك ملكي.jpg" alt="مكشن سمك ملكي زيت زيت سمسم" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مكشن سمك ملكي.jpg" onclick="" alt="مكشن سمك ملكي زيت سمسم"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/مكشن سمك.jpg" alt=" مكشن سمك زيت سمسم" style="width:99px;" onclick="myFunction(this);">
-</div>
+     
 
-<div class="column">
-    <img src="assets/food/عقده لحم.jpg" alt="عقده لحم" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عقده لحم.jpg"onclick="" alt=" عقده لحم"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/عقدة دجاج.jpg" alt="عقدة دجاج "style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عقدة دجاج.jpg" onclick="" alt=" عقدة دجاج"> 
+        </div>
 
-<div class="column">
-    <img src="assets/food/عقده دجاج.jpg" alt="عقده دجاج نصف" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عقده دجاج.jpg" onclick="" alt="عقدة دجاج نصف"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/صالونة سمك.jpg" alt=" صالونة سمك" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/صالونة سمك.jpg" onclick="" alt="صالونة سمك "> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/فحسه لحم.jpg" alt="فحسه لحم" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+         
+            <img src="assets/food/فحسه لحم.jpg" onclick="" alt="فحسه لحم" > 
+        </div>
 
-<div class="column">
-  <img src="assets/food/سلته صنعاني.jpg" alt="سلتة صنعاني "style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/سلته صنعاني.jpg" onclick="" alt="سلتة صنعاني"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/فته مرق.jpg" alt="فتة مرق" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/فته مرق.jpg" onclick="" alt="فتة مرق"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/عصيدة مرق.jpg" alt=" عصيدة مرق" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عصيدة مرق.jpg" onclick="" alt="عصيدة"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/مشكل عادي.jpg" alt="مشكل عادي" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مشكل عادي.jpg"  onclick="" alt="مشكل عادي "> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/مشكل فرن.jpg" alt=" مشكل فرن "style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مشكل فرن.jpg" onclick="" alt="مشكل فرن"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/مصقعه.jpg" alt=" مصقعة" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مصقعه.jpg" onclick="" alt="  مصقع"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/مصقع مخصوص.jpg" alt="مصقعة مخصوص" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مصقع مخصوص.jpg" onclick="" alt=" مصقعة مخصوص"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/بامية.jpg" alt="بامية" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/بامية.jpg" onclick="" alt="بامية"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/ملوخية.jpg" alt="ملوخية "style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/ملوخية.jpg" onclick="" alt="ملوخية"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/مكرونة بالجبن.jpg" alt="مكرونة" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/مكرونة بالجبن.jpg" onclick="" alt="مكرونة"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/حلبة.jpg" alt="حلبة" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/دباء.jpg" onclick="" alt="دباء"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/دباء.jpg" alt="دباء" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/حلبة.jpg" onclick="" alt="حلبة"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/عريكة.jpg" alt=" عريكة "style="width:90px; height: 70px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عريكة.jpg" onclick="" alt="عريكة"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/عريكه سفير الجنوب.jpg" alt=" عريكة سفير الجنوب" style="width:99px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/عريكه سفير الجنوب.jpg" onclick="" alt="عريكة سفير الجنوب"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/معصوب.jpg" alt=" معصوب قشطة وعسل" style="width:99px; height: 70px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/معصوب.jpg" onclick="" alt="معصوب قشطة وعسل"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/معصوب فخار.jpg" alt="معصوب عادي" style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/معصوب فخار.jpg" onclick="" alt="معصوب عادي"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/معصوب مكسرات.jpg" alt="معصوب مكسرات "style="width:90px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/معصوب مكسرات.jpg" onclick="" alt="معصوب مكسرات"> 
+        </div>
 
-<div class="column">
-  <img src="assets/food/معصوب ملكي جبن.jpg" alt="معصوب ملكي جبن" style="width:99px; height: 70px;" onclick="myFunction(this);">
-</div>
+        <div class="img">
+            <img src="assets/food/معصوب ملكي جبن.jpg" onclick="" alt="معصوب ملكي جبن"> 
+        </div>
 
-</div>
+        <div class="img">
+            <img src="assets/food/فته تمر.jpg" onclick="" alt="فتة تمر"> 
+        </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:85%">
-  <div id="imgtext"></div>
-</div>
+        <div class="img">
+            <img src="assets/food/سلطه ورقيات.jpg" onclick="" alt="سلطه ورقيات"> 
+        </div>
 
-<script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-</script>
+        <div class="img">
+            <img src="assets/food/سلطه خضراء.jpg" onclick="" alt=" سلطه خضراء"> 
+        </div>
 
+        <div class="img">
+            <img src="assets/food/شمام.jpg" onclick="" alt=" شمام"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/حبحب.jpg" onclick="" alt="حبحب"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/شفوت بالبن.jpg" onclick="" alt="شفوت مع اللبن"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/خيار بالبن.jpg" onclick="" alt="خيار بالبن"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/جيلي.jpg" onclick="" alt="جيلي"> 
+        </div>
+         
+        <div class="img">
+            <img src="assets/food/شاي أحمر عدني.jpg" onclick="" alt="شاي احمر عدني"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/شاي حليب عدني.jpg" onclick="" alt=" شاي حليب عدني"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/زنجبيل.jpeg" onclick="" alt="زنجبيل"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/زنجبيل حليب.jpg" onclick="" alt="زنجبيل بالحليب"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/كوفي1.jpeg" onclick="" alt=" كوف1"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/كوفي حليب.jpg" onclick="" alt=" كوفي حليب"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/بيبسي عائلي.jpg" onclick="" alt=" بيبسي عائلي"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/بيبسي.jpg" onclick="" alt="بيبسي"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/pepsii.jpg" onclick="" alt=" بيبسي علب"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/ماء كبير.png" onclick="" alt="ماء كبير"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/ماء صغير.jpg" onclick="" alt=" ماء صغير"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/زبادي.jpg" onclick="" alt=" زبادي"> 
+        </div>
+
+        <div class="img">
+            <img src="assets/food/حليب كبير.jpg" onclick="" alt="حليب كبير"> 
+        </div>
+         
+        <div class="img">
+            <img src="assets/food/حليب صغير.jpg" onclick="" alt="حليب صغير"> 
+        </div>
+    </div>
+  </div>  
+
+  <script>
+
+    var img = document.querySelectorAll('img', 'imgtext')
+    
+    img.forEach(play => play.addEventListener('click', () => {
+
+        play.classList.toggle('active');
+
+        if(play.paused){
+            play.play();
+        }else{
+            play.pause();
+            play.currentTime = 0;
+        }
+
+    }));
+  </script>
 </body>
 </html>
-
