@@ -205,7 +205,24 @@ section{
 .menu-item:hover .menu-item-price{
     color: var(--white);
 } 
-
+.footer__widget--title{
+    font-size:2rem;
+}
+.footer__widget--desc{
+    font-size:1.5rem;
+}
+.footer__social{
+    float: right;
+}
+.footer__social span{
+    color: #000000;
+    justify-content: space-between;
+    font-size: 13px;
+    
+}
+.footer__widget--inner{
+    float: right;
+}
 
 @media(max-width:767px){
    
